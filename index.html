@@ -1,0 +1,848 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Mevo School — Software for What's Next</title>
+<meta name="description" content="Mevo School brings students, teachers, attendance, fees, results, notices and school operations into one intelligent platform." />
+<meta name="theme-color" content="#03045E" />
+<meta property="og:title" content="Mevo School — Software for What's Next" />
+<meta property="og:description" content="Run your school. Not your spreadsheets. Modern school management software." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%2303045E'/%3E%3Cpath d='M6 17V7l6 5 6-5v10' stroke='%23fff' stroke-width='2' fill='none' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E" />
+<link rel="stylesheet" href="assets/css/base.css" />
+<link rel="stylesheet" href="assets/css/product-ui.css" />
+<link rel="stylesheet" href="assets/css/site.css" />
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <g id="i-students" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 19v-1.5a3.5 3.5 0 0 0-3.5-3.5h-5A3.5 3.5 0 0 0 3 17.5V19"/><circle cx="9" cy="7" r="3.2"/><path d="M17 14.2a3.5 3.5 0 0 1 4 3.3V19M16 4.3a3.2 3.2 0 0 1 0 6.2"/></g>
+    <g id="i-teachers" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="1.6"/><path d="M12 16v4M8 20h8M7.5 8.5h5M7.5 12h9"/></g>
+    <g id="i-attendance" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="16" rx="2"/><path d="M8 2.5v4M16 2.5v4M3.5 9.5h17M8.5 14.5l2.2 2.2 4.3-4.4"/></g>
+    <g id="i-results" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5V13M9.3 19.5V8M14.7 19.5v-6M20 19.5V4.5"/></g>
+    <g id="i-fees" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M2.5 9.8h19M6 15h3.5"/></g>
+    <g id="i-admissions" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 19v-1.4a3.6 3.6 0 0 0-3.6-3.6H6.6A3.6 3.6 0 0 0 3 17.6V19"/><circle cx="8.5" cy="7.2" r="3.2"/><path d="M18 7.5v6M21 10.5h-6"/></g>
+    <g id="i-notices" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8.6a6 6 0 1 0-12 0c0 6-2.2 7.4-2.2 7.4h16.4S18 14.6 18 8.6Z"/><path d="M13.7 19.6a2 2 0 0 1-3.4 0"/></g>
+    <g id="i-reports" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5Z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></g>
+    <g id="i-dashboard" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="7" height="7.5" rx="1.4"/><rect x="13.5" y="3.5" width="7" height="4.5" rx="1.4"/><rect x="13.5" y="10.5" width="7" height="10" rx="1.4"/><rect x="3.5" y="14" width="7" height="6.5" rx="1.4"/></g>
+    <g id="i-search" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></g>
+    <g id="i-plus" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></g>
+    <g id="i-arw" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12h14M13 6.5 18.5 12 13 17.5"/></g>
+    <g id="i-check" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 4.8 4.8L19.5 7"/></g>
+    <g id="i-chev" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m6.5 9.5 5.5 5.5 5.5-5.5"/></g>
+    <g id="i-filter" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 5.5h17l-6.6 7.7v5.3l-3.8 2v-7.3L3.5 5.5Z"/></g>
+    <g id="i-download" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5v11M7.5 10.5 12 15l4.5-4.5M4 19.5h16"/></g>
+    <g id="i-settings" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 14.5a1.6 1.6 0 0 0 .32 1.77l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.6 1.6 0 0 0-1.77-.32 1.6 1.6 0 0 0-1 1.46V21a2 2 0 0 1-4 0v-.1a1.6 1.6 0 0 0-1.05-1.46 1.6 1.6 0 0 0-1.77.32l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.6 1.6 0 0 0 .32-1.77 1.6 1.6 0 0 0-1.46-1H3a2 2 0 0 1 0-4h.1a1.6 1.6 0 0 0 1.46-1.05 1.6 1.6 0 0 0-.32-1.77l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.6 1.6 0 0 0 1.77.32H9a1.6 1.6 0 0 0 1-1.46V3a2 2 0 0 1 4 0v.1a1.6 1.6 0 0 0 1 1.46 1.6 1.6 0 0 0 1.77-.32l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.6 1.6 0 0 0-.32 1.77V9a1.6 1.6 0 0 0 1.46 1H21a2 2 0 0 1 0 4h-.1a1.6 1.6 0 0 0-1.46 1Z"/></g>
+    <g id="i-shield" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.5s7.5-3.6 7.5-9.5V5.8L12 2.5 4.5 5.8v6.2c0 5.9 7.5 9.5 7.5 9.5Z"/></g>
+    <g id="i-key" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="15.5" r="4"/><path d="m10.4 12.6 8-8M16 7l2.5 2.5M19 4l2 2"/></g>
+    <g id="i-layers" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2.8 9 5-9 5-9-5 9-5Z"/><path d="m3 12.8 9 5 9-5M3 17.3l9 5 9-5"/></g>
+    <g id="i-home" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 10.5 12 3.5l8.5 7M5.5 9.5v10h13v-10"/></g>
+    <g id="i-clock" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5.3l3.3 2"/></g>
+    <g id="i-bolt" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13.5 2.5 4 13.8h6.5L10 21.5 20 10.2h-6.7l.2-7.7Z"/></g>
+    <g id="i-globe" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.6"/><path d="M3.5 12h17M12 3.4c2.3 2.4 3.4 5.4 3.4 8.6s-1.1 6.2-3.4 8.6c-2.3-2.4-3.4-5.4-3.4-8.6S9.7 5.8 12 3.4Z"/></g>
+    <g id="i-more" fill="currentColor"><circle cx="5" cy="12" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="19" cy="12" r="1.6"/></g>
+    <g id="i-x" fill="currentColor"><path d="M17.5 3h3.3l-7.2 8.3L22 21h-6.6l-5.2-6.8L4.3 21H1l7.7-8.8L1.3 3H8l4.7 6.2L17.5 3Zm-1.2 16h1.8L7.8 4.9H5.9L16.3 19Z"/></g>
+    <g id="i-in" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 21h4V9H3v12ZM10 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.76-1.95 4.02 0 4.76 2.5 4.76 5.75V21h-4v-5c0-1.2-.02-2.74-1.8-2.74-1.8 0-2.07 1.3-2.07 2.65V21h-4V9Z"/></g>
+    <g id="i-yt" fill="currentColor"><path d="M22.5 7.2a2.8 2.8 0 0 0-1.95-1.97C18.8 4.75 12 4.75 12 4.75s-6.8 0-8.55.48A2.8 2.8 0 0 0 1.5 7.2 29 29 0 0 0 1 12a29 29 0 0 0 .5 4.8 2.8 2.8 0 0 0 1.95 1.97c1.75.48 8.55.48 8.55.48s6.8 0 8.55-.48a2.8 2.8 0 0 0 1.95-1.97A29 29 0 0 0 23 12a29 29 0 0 0-.5-4.8ZM9.8 15.3V8.7l5.7 3.3-5.7 3.3Z"/></g>
+  </defs>
+</svg>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav" data-boot="nav">
+  <div class="nav__in">
+    <a class="brand" href="#top" aria-label="Mevo School home">
+      <svg class="brand__mk" viewBox="0 0 24 24" aria-hidden="true">
+        <rect width="24" height="24" rx="6.5" fill="#03045E"/>
+        <path d="M6 17.2V7.4l6 5.1 6-5.1v9.8" stroke="#fff" stroke-width="2.1" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+      </svg>
+      <span>Mevo School</span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#product">Product</a>
+      <a href="#features">Features</a>
+      <a href="#solutions">Solutions</a>
+      <a href="#how">How It Works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#resources">Resources</a>
+    </nav>
+    <div class="nav__actions">
+      <a class="nav__login" href="#login">Login</a>
+      <a class="btn btn--sm" data-magnetic href="#get-started">Get Started</a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mnav">
+        <i></i><i></i><i></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mnav" id="mnav" hidden>
+  <a class="ml" href="#product">Product <svg width="18" height="18"><use href="#i-arw"/></svg></a>
+  <a class="ml" href="#features">Features <svg width="18" height="18"><use href="#i-arw"/></svg></a>
+  <a class="ml" href="#solutions">Solutions <svg width="18" height="18"><use href="#i-arw"/></svg></a>
+  <a class="ml" href="#how">How It Works <svg width="18" height="18"><use href="#i-arw"/></svg></a>
+  <a class="ml" href="#pricing">Pricing <svg width="18" height="18"><use href="#i-arw"/></svg></a>
+  <a class="ml" href="#resources">Resources <svg width="18" height="18"><use href="#i-arw"/></svg></a>
+  <div class="mnav__foot">
+    <a class="btn btn--ghost btn--lg" href="#login">Login</a>
+    <a class="btn btn--lg" href="#get-started">Get Started</a>
+  </div>
+</div>
+
+<main id="main">
+<span id="top"></span>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero__grid" aria-hidden="true">
+    <span style="left:16.6%;animation-delay:.15s"></span>
+    <span style="left:33.3%;animation-delay:.25s"></span>
+    <span style="left:50%;animation-delay:.35s"></span>
+    <span style="left:66.6%;animation-delay:.45s"></span>
+    <span style="left:83.3%;animation-delay:.55s"></span>
+  </div>
+  <div class="wrap hero__in">
+    <div class="hero__tag" data-boot="tag">
+      <span><b>Mevo School</b> &nbsp;·&nbsp; Software for What's Next</span>
+      <span class="chev"><svg width="11" height="11"><use href="#i-arw"/></svg></span>
+    </div>
+
+    <h1 class="display" data-boot="h1">
+      <span class="rvt"><span style="--d:80ms">Run Your School.</span></span>
+      <span class="rvt"><span style="--d:190ms">Not Your <em>Spreadsheets.</em></span></span>
+    </h1>
+
+    <p class="lede hero__lede" data-boot="lede">
+      Mevo School brings students, teachers, attendance, fees, results, notices and
+      school operations into one intelligent platform.
+    </p>
+
+    <div class="hero__cta" data-boot="cta">
+      <a class="btn btn--lg" data-magnetic href="#get-started">Get Started <svg class="arw" width="16" height="16"><use href="#i-arw"/></svg></a>
+      <a class="btn btn--lg btn--ghost" data-magnetic href="#showcase">Explore Mevo School</a>
+    </div>
+
+    <div class="hero__meta" data-boot="meta">
+      <span><svg width="13" height="13" style="color:var(--navy)"><use href="#i-check"/></svg> One platform for the whole school</span>
+      <span><svg width="13" height="13" style="color:var(--navy)"><use href="#i-check"/></svg> Role-based access</span>
+      <span><svg width="13" height="13" style="color:var(--navy)"><use href="#i-check"/></svg> Works on desktop &amp; mobile</span>
+    </div>
+  </div>
+
+  <!-- product stage -->
+  <div class="wrap stage" data-stage>
+    <div class="stage__glow" aria-hidden="true"></div>
+
+    <div class="chip chip--l">
+      <span class="chip__ico"><svg><use href="#i-attendance"/></svg></span>
+      <span><b class="tnum" data-count="96.4" data-dec="1" data-suffix="%">0%</b><small>Attendance today</small></span>
+    </div>
+    <div class="chip chip--r">
+      <span class="chip__ico"><svg><use href="#i-fees"/></svg></span>
+      <span><b class="tnum" data-count="82" data-suffix="%">0%</b><small>Fees collected · term</small></span>
+    </div>
+
+    <div class="stage__app">
+      <div class="app" data-chart-scope>
+        <div class="app__bar">
+          <span class="app__dots"><i></i><i></i><i></i></span>
+          <span class="app__url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg> app.mevoschool.com/dashboard</span>
+          <span class="pill pill--flat"><span class="dot-live"></span> Live</span>
+        </div>
+        <div class="app__shell">
+          <aside class="app__side">
+            <div class="app__brand">
+              <svg class="mk" viewBox="0 0 24 24"><rect width="24" height="24" rx="6.5" fill="#03045E"/><path d="M6 17.2V7.4l6 5.1 6-5.1v9.8" stroke="#fff" stroke-width="2.1" fill="none" stroke-linejoin="round" stroke-linecap="round"/></svg>
+              <b>Mevo School</b>
+            </div>
+            <a class="nv is-on"><svg><use href="#i-dashboard"/></svg> Dashboard</a>
+            <a class="nv"><svg><use href="#i-students"/></svg> Students</a>
+            <a class="nv"><svg><use href="#i-teachers"/></svg> Teachers</a>
+            <a class="nv"><svg><use href="#i-attendance"/></svg> Attendance</a>
+            <div class="nv__group">Academics</div>
+            <a class="nv"><svg><use href="#i-results"/></svg> Results</a>
+            <a class="nv"><svg><use href="#i-fees"/></svg> Fees</a>
+            <a class="nv"><svg><use href="#i-notices"/></svg> Notices</a>
+            <a class="nv"><svg><use href="#i-reports"/></svg> Reports</a>
+            <div class="nv__spacer"></div>
+            <a class="nv"><svg><use href="#i-settings"/></svg> Settings</a>
+          </aside>
+
+          <div class="app__main">
+            <div class="app__head">
+              <div>
+                <div class="app__title">Good morning, Principal Rao</div>
+                <div class="app__sub">Greenfield Public School · Monday, 28 September</div>
+              </div>
+              <div class="app__tools">
+                <span class="srch"><svg><use href="#i-search"/></svg> Search students…</span>
+                <button class="btn-x"><svg><use href="#i-download"/></svg> Export</button>
+                <span class="ava ava--navy">AR</span>
+              </div>
+            </div>
+
+            <div class="app__body">
+              <div class="mt-row">
+                <div class="mt">
+                  <div class="mt__k">Total students</div>
+                  <div class="mt__v tnum" data-count="1284">0</div>
+                  <div class="mt__d">+18 this term</div>
+                </div>
+                <div class="mt">
+                  <div class="mt__k">Teachers</div>
+                  <div class="mt__v tnum" data-count="74">0</div>
+                  <div class="mt__d">6 departments</div>
+                </div>
+                <div class="mt">
+                  <div class="mt__k">Attendance today</div>
+                  <div class="mt__v tnum" data-count="96.4" data-dec="1" data-suffix="%">0%</div>
+                  <div class="mt__d">+1.2% vs last week</div>
+                </div>
+                <div class="mt">
+                  <div class="mt__k">Fees collected</div>
+                  <div class="mt__v tnum" data-count="82" data-prefix="" data-suffix="%">0%</div>
+                  <div class="mt__d is-down">18% pending</div>
+                </div>
+              </div>
+
+              <div style="display:grid;grid-template-columns:1.55fr 1fr;gap:12px" class="app__split">
+                <div class="chart" data-chart>
+                  <div class="chart__hd">
+                    <div>
+                      <div class="chart__t">Attendance trend</div>
+                      <div class="chart__s">Last 12 weeks · all classes</div>
+                    </div>
+                    <span class="pill pill--ok">Stable</span>
+                  </div>
+                  <svg viewBox="0 0 420 132" preserveAspectRatio="none" role="img" aria-label="Attendance trend line chart">
+                    <line class="gridline" x1="0" y1="8" x2="420" y2="8"/>
+                    <line class="gridline" x1="0" y1="48" x2="420" y2="48"/>
+                    <line class="gridline" x1="0" y1="88" x2="420" y2="88"/>
+                    <line class="gridline" x1="0" y1="118" x2="420" y2="118"/>
+                    <path class="area-fill" d="M0 92 L38 80 L76 86 L114 64 L152 70 L190 52 L228 58 L266 40 L304 46 L342 30 L380 36 L420 24 L420 118 L0 118 Z" fill="url(#gA)"/>
+                    <path class="draw" d="M0 92 L38 80 L76 86 L114 64 L152 70 L190 52 L228 58 L266 40 L304 46 L342 30 L380 36 L420 24" fill="none" stroke="#03045E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <defs><linearGradient id="gA" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#03045E" stop-opacity=".14"/><stop offset="1" stop-color="#03045E" stop-opacity="0"/></linearGradient></defs>
+                  </svg>
+                  <div class="chart__legend"><span><i style="background:#03045E"></i> Present rate</span><span><i style="background:#c9d6ff"></i> Target 95%</span></div>
+                </div>
+
+                <div class="chart">
+                  <div class="chart__hd">
+                    <div>
+                      <div class="chart__t">Fee collection</div>
+                      <div class="chart__s">Term 2 · by class group</div>
+                    </div>
+                  </div>
+                  <svg viewBox="0 0 220 120" role="img" aria-label="Fee collection bar chart">
+                    <line class="gridline" x1="0" y1="100" x2="220" y2="100"/>
+                    <g>
+                      <rect class="bar" x="8"   y="38" width="26" height="62" rx="3" fill="#03045E" style="animation-delay:.05s"/>
+                      <rect class="bar" x="50"  y="22" width="26" height="78" rx="3" fill="#03045E" style="animation-delay:.12s"/>
+                      <rect class="bar" x="92"  y="54" width="26" height="46" rx="3" fill="#c9d6ff" style="animation-delay:.19s"/>
+                      <rect class="bar" x="134" y="30" width="26" height="70" rx="3" fill="#03045E" style="animation-delay:.26s"/>
+                      <rect class="bar" x="176" y="62" width="26" height="38" rx="3" fill="#c9d6ff" style="animation-delay:.33s"/>
+                    </g>
+                    <text class="axis-t" x="21" y="113" text-anchor="middle">I–III</text>
+                    <text class="axis-t" x="63" y="113" text-anchor="middle">IV–VI</text>
+                    <text class="axis-t" x="105" y="113" text-anchor="middle">VII</text>
+                    <text class="axis-t" x="147" y="113" text-anchor="middle">VIII–IX</text>
+                    <text class="axis-t" x="189" y="113" text-anchor="middle">X–XII</text>
+                  </svg>
+                </div>
+              </div>
+
+              <div style="display:grid;grid-template-columns:1.55fr 1fr;gap:12px" class="app__split">
+                <div class="chart" style="padding-bottom:12px">
+                  <div class="chart__hd">
+                    <div><div class="chart__t">Teacher activity</div><div class="chart__s">Today · marking &amp; updates</div></div>
+                    <button class="btn-x">View all</button>
+                  </div>
+                  <div class="tbl-scroll">
+                  <table class="tbl">
+                    <thead><tr><th>Teacher</th><th>Class</th><th>Action</th><th class="r">Status</th></tr></thead>
+                    <tbody>
+                      <tr><td><span class="cell-u"><span class="ava ava--sm">SK</span><span><b>S. Kulkarni</b><span>Mathematics</span></span></span></td><td>IX–B</td><td>Attendance marked</td><td class="r"><span class="pill pill--ok">Done</span></td></tr>
+                      <tr><td><span class="cell-u"><span class="ava ava--sm">MN</span><span><b>M. Nair</b><span>Science</span></span></span></td><td>VII–A</td><td>Unit test uploaded</td><td class="r"><span class="pill pill--ok">Done</span></td></tr>
+                      <tr><td><span class="cell-u"><span class="ava ava--sm">RD</span><span><b>R. Das</b><span>English</span></span></span></td><td>X–C</td><td>Attendance marked</td><td class="r"><span class="pill pill--warn">Pending</span></td></tr>
+                    </tbody>
+                  </table>
+                  </div>
+                </div>
+
+                <div class="chart">
+                  <div class="chart__hd">
+                    <div><div class="chart__t">Recent notices</div><div class="chart__s">Published this week</div></div>
+                  </div>
+                  <div class="lrow"><span class="ava ava--sm">N</span><span class="lrow__b"><span class="lrow__t">Half-yearly exam timetable</span><span class="lrow__m">All classes · 2h ago</span></span></div>
+                  <div class="lrow"><span class="ava ava--sm">N</span><span class="lrow__b"><span class="lrow__t">Parent–teacher meeting</span><span class="lrow__m">Classes VI–X · Yesterday</span></span></div>
+                  <div class="lrow"><span class="ava ava--sm">N</span><span class="lrow__b"><span class="lrow__t">Annual sports day trials</span><span class="lrow__m">All classes · 2 days ago</span></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CAPABILITIES ============ -->
+<section class="section section--tight" id="product">
+  <div class="wrap">
+    <div class="cap__top">
+      <div data-rv>
+        <span class="eyebrow">Capabilities</span>
+        <h2 class="h2" style="margin-top:18px">Everything your school needs.<br>Nothing it doesn't.</h2>
+      </div>
+      <p class="lede" data-rv data-rv-delay="120">
+        Mevo School is built as one system — not a bundle of disconnected tools.
+        Each module shares the same records, the same permissions and the same source of truth.
+      </p>
+    </div>
+
+    <div class="capgrid" data-stagger>
+      <div class="cap" data-rv><span class="cap__n">01</span><div class="cap__ico"><svg><use href="#i-students"/></svg></div><h4>Students</h4><p>Profiles, classes, sections and complete academic history.</p></div>
+      <div class="cap" data-rv><span class="cap__n">02</span><div class="cap__ico"><svg><use href="#i-teachers"/></svg></div><h4>Teachers</h4><p>Staff records, subject allocation and daily workload.</p></div>
+      <div class="cap" data-rv><span class="cap__n">03</span><div class="cap__ico"><svg><use href="#i-attendance"/></svg></div><h4>Attendance</h4><p>Daily marking with class, section and student-level views.</p></div>
+      <div class="cap" data-rv><span class="cap__n">04</span><div class="cap__ico"><svg><use href="#i-results"/></svg></div><h4>Results</h4><p>Marks entry, grading and term-wise performance records.</p></div>
+      <div class="cap" data-rv><span class="cap__n">05</span><div class="cap__ico"><svg><use href="#i-fees"/></svg></div><h4>Fees</h4><p>Structures, invoices, receipts and pending balances.</p></div>
+      <div class="cap" data-rv><span class="cap__n">06</span><div class="cap__ico"><svg><use href="#i-admissions"/></svg></div><h4>Admissions</h4><p>Enquiry to enrolment, tracked through one clear pipeline.</p></div>
+      <div class="cap" data-rv><span class="cap__n">07</span><div class="cap__ico"><svg><use href="#i-notices"/></svg></div><h4>Notices</h4><p>School-wide or targeted announcements with read tracking.</p></div>
+      <div class="cap" data-rv><span class="cap__n">08</span><div class="cap__ico"><svg><use href="#i-reports"/></svg></div><h4>Reports</h4><p>Exportable reports across attendance, academics and fees.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROBLEM / TRANSFORMATION ============ -->
+<section class="section prob" id="solutions">
+  <div class="wrap">
+    <div class="prob__head">
+      <span class="eyebrow" data-rv>The shift</span>
+      <h2 class="h2" data-rv data-rv-delay="80" style="margin-top:18px">School management shouldn't feel like managing paperwork.</h2>
+      <p class="lede" data-rv data-rv-delay="160" style="margin-top:20px;max-width:56ch">
+        Most schools didn't choose fragmentation — it accumulated. Mevo School is the step that puts it back together.
+      </p>
+    </div>
+
+    <div class="prob__track" data-transform>
+      <article class="pstep" data-step="0">
+        <span class="pstep__bar"></span>
+        <div class="pstep__k"><span>Stage 01</span><span>Paper</span></div>
+        <h4>Registers and files</h4>
+        <p>Attendance in registers, fees in receipt books, results in folders. Nothing is searchable.</p>
+        <div class="pstep__vis">
+          <div class="scatter">
+            <i class="sheet" style="left:0;top:8px;transform:rotate(-7deg)"></i>
+            <i class="sheet" style="left:34px;top:0;transform:rotate(4deg)"></i>
+            <i class="sheet" style="left:70px;top:14px;transform:rotate(-3deg)"></i>
+            <i class="sheet" style="left:106px;top:4px;transform:rotate(9deg)"></i>
+          </div>
+        </div>
+      </article>
+
+      <article class="pstep" data-step="1">
+        <span class="pstep__bar"></span>
+        <div class="pstep__k"><span>Stage 02</span><span>Spreadsheets</span></div>
+        <h4>Twelve versions of truth</h4>
+        <p>Every department keeps its own sheet. Numbers stop matching by the second week of term.</p>
+        <div class="pstep__vis">
+          <div class="cells">
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          </div>
+        </div>
+      </article>
+
+      <article class="pstep" data-step="2">
+        <span class="pstep__bar"></span>
+        <div class="pstep__k"><span>Stage 03</span><span>Multiple systems</span></div>
+        <h4>Tools that don't talk</h4>
+        <p>One tool for fees, another for messaging, another for results — and manual work between all of them.</p>
+        <div class="pstep__vis">
+          <div class="sys"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
+      </article>
+
+      <article class="pstep" data-step="3">
+        <span class="pstep__bar"></span>
+        <div class="pstep__k"><span>Stage 04</span><span style="color:#93a4ff">Mevo School</span></div>
+        <h4>One connected record</h4>
+        <p>Every student, class, payment and result in a single system that the whole school shares.</p>
+        <div class="pstep__vis">
+          <div class="unified">
+            <div class="u-row"><span class="u-dot"></span><span class="u-bar" style="width:70%"></span></div>
+            <div class="u-row"><span class="u-dot"></span><span class="u-bar"></span></div>
+            <div class="u-row"><span class="u-dot"></span><span class="u-bar" style="opacity:.6"></span></div>
+            <div class="u-row"><span class="u-dot"></span><span class="u-bar" style="opacity:.4"></span></div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ECOSYSTEM ============ -->
+<section class="section">
+  <div class="wrap">
+    <div style="max-width:720px">
+      <span class="eyebrow" data-rv>The platform</span>
+      <h2 class="h2" data-rv data-rv-delay="80" style="margin-top:18px">One platform.<br>Your entire school.</h2>
+      <p class="lede" data-rv data-rv-delay="150" style="margin-top:20px;max-width:52ch">
+        Mevo School runs as the operating layer underneath everyday school work. Hover a module to see how it connects.
+      </p>
+    </div>
+
+    <div class="eco" data-eco>
+      <div class="eco__canvas" data-rv>
+        <svg class="wires" viewBox="0 0 600 520" preserveAspectRatio="none" aria-hidden="true"></svg>
+        <div class="eco__core">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M6 17.2V7.4l6 5.1 6-5.1v9.8" stroke="#fff" stroke-width="2.1" stroke-linejoin="round" stroke-linecap="round"/></svg>
+          <b>Mevo School</b>
+          <small>CORE</small>
+        </div>
+      </div>
+
+      <div class="eco__panel" data-rv data-rv-delay="120" data-eco-panel></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURES ============ -->
+<div id="features"></div>
+
+<section class="feat" data-feat>
+  <div class="wrap feat__in">
+    <div class="feat__txt" data-rv>
+      <span class="feat__n">F01 / STUDENT MANAGEMENT</span>
+      <h3 class="h3">Every student.<br><span class="q">One clear view.</span></h3>
+      <p class="feat__p">Class, section, attendance, academics and fee status live on a single record — so nobody has to reconcile four lists to answer one question.</p>
+      <div class="feat__facts">
+        <div><b>01</b> Full profile with guardian and contact details</div>
+        <div><b>02</b> Attendance and academic history in context</div>
+        <div><b>03</b> Fee status visible without leaving the record</div>
+      </div>
+    </div>
+    <div class="feat__vis" data-rv data-rv-delay="110" data-ui="student"></div>
+  </div>
+</section>
+
+<section class="feat feat--flip" data-feat>
+  <div class="wrap feat__in">
+    <div class="feat__txt" data-rv>
+      <span class="feat__n">F02 / TEACHER MANAGEMENT</span>
+      <h3 class="h3">Staff, subjects<br><span class="q">and the day's load.</span></h3>
+      <p class="feat__p">Allocate subjects and sections, see who has marked attendance, and keep teaching records in one place.</p>
+      <div class="feat__facts">
+        <div><b>01</b> Subject and section allocation</div>
+        <div><b>02</b> Daily timetable and workload view</div>
+        <div><b>03</b> Pending actions surfaced automatically</div>
+      </div>
+    </div>
+    <div class="feat__vis" data-rv data-rv-delay="110" data-ui="teacher"></div>
+  </div>
+</section>
+
+<section class="feat" data-feat>
+  <div class="wrap feat__in">
+    <div class="feat__txt" data-rv>
+      <span class="feat__n">F03 / ATTENDANCE</span>
+      <h3 class="h3">Marked in seconds.<br><span class="q">Visible all term.</span></h3>
+      <p class="feat__p">Teachers mark a class in a single pass. Administrators see patterns across sections without chasing registers.</p>
+      <div class="feat__facts">
+        <div><b>01</b> Class-wise daily marking</div>
+        <div><b>02</b> Student, section and school-level views</div>
+        <div><b>03</b> Term patterns at a glance</div>
+      </div>
+    </div>
+    <div class="feat__vis" data-rv data-rv-delay="110" data-ui="attendance"></div>
+  </div>
+</section>
+
+<section class="feat feat--flip feat--wide" data-feat>
+  <div class="wrap feat__in">
+    <div class="feat__txt" data-rv>
+      <span class="feat__n">F04 / RESULTS &amp; PERFORMANCE</span>
+      <h3 class="h3">Marks in.<br><span class="q">Meaning out.</span></h3>
+      <p class="feat__p">Enter marks once and get grades, subject averages and term comparisons without rebuilding a spreadsheet each time.</p>
+      <div class="feat__facts">
+        <div><b>01</b> Structured marks entry per subject</div>
+        <div><b>02</b> Grade and average calculation</div>
+        <div><b>03</b> Term-over-term comparison</div>
+      </div>
+    </div>
+    <div class="feat__vis" data-rv data-rv-delay="110" data-ui="results"></div>
+  </div>
+</section>
+
+<section class="feat" data-feat>
+  <div class="wrap feat__in">
+    <div class="feat__txt" data-rv>
+      <span class="feat__n">F05 / FEES MANAGEMENT</span>
+      <h3 class="h3">Collected, receipted,<br><span class="q">reconciled.</span></h3>
+      <p class="feat__p">Define structures once, then track invoices, receipts and pending balances by class, section or individual student.</p>
+      <div class="feat__facts">
+        <div><b>01</b> Fee structures by class and category</div>
+        <div><b>02</b> Receipts generated on collection</div>
+        <div><b>03</b> Pending balances always current</div>
+      </div>
+    </div>
+    <div class="feat__vis" data-rv data-rv-delay="110" data-ui="fees"></div>
+  </div>
+</section>
+
+<section class="feat feat--flip" data-feat>
+  <div class="wrap feat__in">
+    <div class="feat__txt" data-rv>
+      <span class="feat__n">F06 / ADMISSIONS</span>
+      <h3 class="h3">Enquiry to enrolment,<br><span class="q">in one pipeline.</span></h3>
+      <p class="feat__p">Every applicant moves through clear stages, so the admissions team always knows what is waiting on them.</p>
+      <div class="feat__facts">
+        <div><b>01</b> Stage-based applicant pipeline</div>
+        <div><b>02</b> Documents and details attached to the applicant</div>
+        <div><b>03</b> Enrolled applicants become student records</div>
+      </div>
+    </div>
+    <div class="feat__vis" data-rv data-rv-delay="110" data-ui="admissions"></div>
+  </div>
+</section>
+
+<section class="feat" data-feat>
+  <div class="wrap feat__in">
+    <div class="feat__txt" data-rv>
+      <span class="feat__n">F07 / NOTICES &amp; COMMUNICATION</span>
+      <h3 class="h3">Say it once.<br><span class="q">Reach the right classes.</span></h3>
+      <p class="feat__p">Publish to the whole school or to specific classes and sections, and see what has actually been read.</p>
+      <div class="feat__facts">
+        <div><b>01</b> Targeted by class, section or role</div>
+        <div><b>02</b> Scheduled and draft notices</div>
+        <div><b>03</b> Read tracking per audience</div>
+      </div>
+    </div>
+    <div class="feat__vis" data-rv data-rv-delay="110" data-ui="notices"></div>
+  </div>
+</section>
+
+<section class="feat feat--flip" data-feat>
+  <div class="wrap feat__in">
+    <div class="feat__txt" data-rv>
+      <span class="feat__n">F08 / REPORTS</span>
+      <h3 class="h3">The answer,<br><span class="q">already assembled.</span></h3>
+      <p class="feat__p">Attendance, academics, fees and admissions reports generated from live records — ready to review or export.</p>
+      <div class="feat__facts">
+        <div><b>01</b> Standard reports across every module</div>
+        <div><b>02</b> Filter by class, section, term or date</div>
+        <div><b>03</b> Export for meetings and records</div>
+      </div>
+    </div>
+    <div class="feat__vis" data-rv data-rv-delay="110" data-ui="reports"></div>
+  </div>
+</section>
+
+<!-- ============ INTERACTIVE SHOWCASE ============ -->
+<section class="section show" id="showcase">
+  <div class="wrap">
+    <div class="show__head">
+      <div data-rv>
+        <span class="eyebrow">Product tour</span>
+        <h2 class="h2" style="margin-top:16px">See Mevo School in action.</h2>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Product areas" data-tabs>
+        <span class="tabs__ink" aria-hidden="true"></span>
+        <button role="tab" class="is-on" data-tab="overview" aria-selected="true">Overview</button>
+        <button role="tab" data-tab="students" aria-selected="false">Students</button>
+        <button role="tab" data-tab="teachers" aria-selected="false">Teachers</button>
+        <button role="tab" data-tab="attendance" aria-selected="false">Attendance</button>
+        <button role="tab" data-tab="results" aria-selected="false">Results</button>
+        <button role="tab" data-tab="fees" aria-selected="false">Fees</button>
+        <button role="tab" data-tab="reports" aria-selected="false">Reports</button>
+      </div>
+    </div>
+    <div class="show__stage" data-show-stage></div>
+  </div>
+</section>
+
+<!-- ============ PRINCIPAL DASHBOARD ============ -->
+<section class="section" id="how">
+  <div class="wrap prin__grid">
+    <aside class="prin__aside" data-rv>
+      <span class="eyebrow">Principal dashboard</span>
+      <h2 class="h2" style="margin-top:18px;font-size:clamp(30px,3.4vw,44px)">Know what's happening in your school.</h2>
+      <p class="lede" style="margin-top:18px">A single screen for the numbers a principal is asked about every day.</p>
+      <div class="prin__facts">
+        <div class="prin__fact"><b>Today, not last month</b><span>Attendance and collections reflect live records.</span></div>
+        <div class="prin__fact"><b>Whole school, then detail</b><span>Start at the school level, drill into a class or a student.</span></div>
+        <div class="prin__fact"><b>Readable on any device</b><span>The same dashboard works on a laptop or an Android phone.</span></div>
+      </div>
+    </aside>
+    <div data-rv data-rv-delay="120" data-ui="principal"></div>
+  </div>
+</section>
+
+<!-- ============ WORKFLOW ============ -->
+<section class="section section--wash" style="border-block:1px solid var(--line)">
+  <div class="wrap">
+    <div style="max-width:680px">
+      <span class="eyebrow" data-rv>The journey</span>
+      <h2 class="h2" data-rv data-rv-delay="80" style="margin-top:16px">From first enquiry<br>to final report.</h2>
+      <p class="lede" data-rv data-rv-delay="140" style="margin-top:18px">Each stage hands clean data to the next. Nothing is re-entered.</p>
+    </div>
+
+    <div class="flow__rail" data-flow>
+      <div class="flow__line" aria-hidden="true"><i></i></div>
+      <div class="fstep" data-fstep>
+        <div class="fstep__dot"><svg><use href="#i-admissions"/></svg></div>
+        <div class="fstep__k">Admission</div>
+        <p>Applicant enters the pipeline.</p>
+        <div class="fstep__card"><div class="lrow__t">A. Sharma</div><div class="lrow__m">Class VI · Enquiry</div><div class="meter" style="margin-top:8px"><i style="--w:25%"></i></div></div>
+      </div>
+      <div class="fstep" data-fstep>
+        <div class="fstep__dot"><svg><use href="#i-students"/></svg></div>
+        <div class="fstep__k">Student</div>
+        <p>Enrolment creates the record.</p>
+        <div class="fstep__card"><div class="lrow__t">MEVO-2451</div><div class="lrow__m">VI–A · Active</div><div class="meter" style="margin-top:8px"><i style="--w:45%"></i></div></div>
+      </div>
+      <div class="fstep" data-fstep>
+        <div class="fstep__dot"><svg><use href="#i-attendance"/></svg></div>
+        <div class="fstep__k">Attendance</div>
+        <p>Daily marking begins.</p>
+        <div class="fstep__card"><div class="lrow__t">97% present</div><div class="lrow__m">Term to date</div><div class="meter meter--ok" style="margin-top:8px"><i style="--w:97%"></i></div></div>
+      </div>
+      <div class="fstep" data-fstep>
+        <div class="fstep__dot"><svg><use href="#i-results"/></svg></div>
+        <div class="fstep__k">Academics</div>
+        <p>Marks and grades recorded.</p>
+        <div class="fstep__card"><div class="lrow__t">Grade A</div><div class="lrow__m">Term 1 average 86%</div><div class="meter" style="margin-top:8px"><i style="--w:86%"></i></div></div>
+      </div>
+      <div class="fstep" data-fstep>
+        <div class="fstep__dot"><svg><use href="#i-fees"/></svg></div>
+        <div class="fstep__k">Fees</div>
+        <p>Invoices and receipts tracked.</p>
+        <div class="fstep__card"><div class="lrow__t">Term 2 paid</div><div class="lrow__m">Receipt #10482</div><div class="meter meter--ok" style="margin-top:8px"><i style="--w:100%"></i></div></div>
+      </div>
+      <div class="fstep" data-fstep>
+        <div class="fstep__dot"><svg><use href="#i-reports"/></svg></div>
+        <div class="fstep__k">Reports</div>
+        <p>Everything rolls up.</p>
+        <div class="fstep__card"><div class="lrow__t">Term report</div><div class="lrow__m">Ready to export</div><div class="meter" style="margin-top:8px"><i style="--w:70%"></i></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MOBILE ============ -->
+<section class="section mob">
+  <div class="wrap">
+    <div class="mob__grid">
+      <div>
+        <span class="eyebrow" data-rv>Mobile</span>
+        <h2 class="h2" data-rv data-rv-delay="70" style="margin-top:16px">Your school.<br>Anywhere.</h2>
+        <p class="lede" data-rv data-rv-delay="130" style="margin-top:18px;max-width:46ch">
+          The mobile experience is designed for touch — not a desktop layout squeezed onto a phone.
+        </p>
+        <div class="mob__points">
+          <div class="mob__pt" data-rv><span class="ix">01</span><div><b>Built for one thumb</b><p>Large targets, bottom navigation and short paths to the screens used most.</p></div></div>
+          <div class="mob__pt" data-rv data-rv-delay="80"><span class="ix">02</span><div><b>Only what matters here</b><p>Mobile shows the decisions of the day, not every column of a desktop table.</p></div></div>
+          <div class="mob__pt" data-rv data-rv-delay="160"><span class="ix">03</span><div><b>Same records, same permissions</b><p>A teacher sees their classes; a principal sees the school.</p></div></div>
+        </div>
+        <div class="phone-switch" data-phone-switch>
+          <button class="is-on" data-screen="dash">Principal Dashboard</button>
+          <button data-screen="student">Student Profile</button>
+          <button data-screen="att">Attendance</button>
+          <button data-screen="fees">Fees</button>
+          <button data-screen="notices">Notices</button>
+        </div>
+      </div>
+      <div class="phones" data-rv data-rv-delay="120">
+        <div class="phone" data-phone="a"></div>
+        <div class="phone" data-phone="b"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECURITY ============ -->
+<section class="section" id="resources">
+  <div class="wrap">
+    <div style="max-width:720px">
+      <span class="eyebrow" data-rv>Trust &amp; reliability</span>
+      <h2 class="h2" data-rv data-rv-delay="70" style="margin-top:16px">Built for the information<br>schools can't afford to lose.</h2>
+      <p class="lede" data-rv data-rv-delay="130" style="margin-top:18px;max-width:54ch">
+        Access is deliberate, records are structured, and every action belongs to a role.
+      </p>
+    </div>
+
+    <div class="sec__grid">
+      <div class="sec__cell" data-rv>
+        <div class="sec__vis" data-svis="access"></div>
+        <h4>Secure access</h4>
+        <p>Each person signs in as themselves. Accounts belong to a school, and sessions are scoped to that school.</p>
+      </div>
+      <div class="sec__cell" data-rv data-rv-delay="70">
+        <div class="sec__vis" data-svis="roles"></div>
+        <h4>Role-based permissions</h4>
+        <p>Principal, administrator and teacher roles each see the records their work requires — and no more.</p>
+      </div>
+      <div class="sec__cell" data-rv data-rv-delay="140">
+        <div class="sec__vis" data-svis="arch"></div>
+        <h4>Reliable architecture</h4>
+        <p>Modules share one structured data layer, so records stay consistent as the school grows.</p>
+      </div>
+      <div class="sec__cell sec__cell--full" data-rv>
+        <div>
+          <h4>Controlled access, visible at a glance</h4>
+          <p>Permissions are a matrix, not a mystery. Administrators can see exactly which role can read or edit each module before anyone signs in.</p>
+        </div>
+        <div class="perm-tbl" data-perm></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section class="section section--wash" id="pricing" style="border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="price__head">
+      <span class="eyebrow eyebrow--plain" data-rv>Pricing</span>
+      <h2 class="h2" data-rv data-rv-delay="70" style="margin-top:14px">Start with your school.</h2>
+      <p class="lede" data-rv data-rv-delay="130" style="margin-top:16px">Simple plans that scale with the number of students you manage.</p>
+      <div class="toggle" data-billing data-rv data-rv-delay="180">
+        <span class="toggle__ink" aria-hidden="true"></span>
+        <button class="is-on" data-bill="m">Monthly</button>
+        <button data-bill="y">Yearly <span class="toggle__save">−20%</span></button>
+      </div>
+    </div>
+
+    <div class="plans" data-rv data-rv-delay="120">
+      <div class="plan">
+        <div class="plan__name">Essential</div>
+        <p class="plan__desc">For smaller schools putting their core records in one place.</p>
+        <div class="plan__price"><span class="plan__amt" data-price data-m="49" data-y="39">$49</span><span class="plan__per">/ month</span></div>
+        <div class="plan__note" data-note>Billed monthly · up to 300 students</div>
+        <a class="btn btn--ghost" href="#get-started">Get Started</a>
+        <ul class="plan__feats">
+          <li><svg><use href="#i-check"/></svg> Students, teachers &amp; classes</li>
+          <li><svg><use href="#i-check"/></svg> Attendance and notices</li>
+          <li><svg><use href="#i-check"/></svg> Standard reports</li>
+          <li><svg><use href="#i-check"/></svg> Mobile access for staff</li>
+        </ul>
+      </div>
+
+      <div class="plan plan--best">
+        <div class="plan__name">School <span class="plan__badge">Recommended</span></div>
+        <p class="plan__desc">The full platform for schools running day-to-day operations on Mevo.</p>
+        <div class="plan__price"><span class="plan__amt" data-price data-m="129" data-y="103">$129</span><span class="plan__per">/ month</span></div>
+        <div class="plan__note" data-note>Billed monthly · up to 1,500 students</div>
+        <a class="btn btn--invert" href="#get-started">Get Started <svg class="arw" width="15" height="15"><use href="#i-arw"/></svg></a>
+        <ul class="plan__feats">
+          <li><svg><use href="#i-check"/></svg> Everything in Essential</li>
+          <li><svg><use href="#i-check"/></svg> Fees, results and admissions</li>
+          <li><svg><use href="#i-check"/></svg> Principal dashboard</li>
+          <li><svg><use href="#i-check"/></svg> Role-based permissions</li>
+          <li><svg><use href="#i-check"/></svg> Exportable reporting</li>
+        </ul>
+      </div>
+
+      <div class="plan">
+        <div class="plan__name">Institution</div>
+        <p class="plan__desc">For larger institutions and groups managing multiple schools.</p>
+        <div class="plan__price"><span class="plan__amt">Custom</span></div>
+        <div class="plan__note">Multiple schools under one account</div>
+        <a class="btn btn--ghost" href="#contact">Talk to Us</a>
+        <ul class="plan__feats">
+          <li><svg><use href="#i-check"/></svg> Everything in School</li>
+          <li><svg><use href="#i-check"/></svg> Multi-school management</li>
+          <li><svg><use href="#i-check"/></svg> Consolidated reporting</li>
+          <li><svg><use href="#i-check"/></svg> Onboarding support</li>
+        </ul>
+      </div>
+    </div>
+    <p class="price__foot">Yearly billing applies a 20% discount to the monthly rate. Plans can be changed as your school grows.</p>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section">
+  <div class="wrap faq__grid">
+    <div data-rv>
+      <span class="eyebrow">FAQ</span>
+      <h2 class="h2" style="margin-top:16px;font-size:clamp(28px,3.2vw,42px)">Questions,<br>answered plainly.</h2>
+      <p class="body-sm" style="margin-top:16px;max-width:30ch">Still unsure about something? <a class="link-arrow" href="#contact" style="display:inline-flex">Talk to us <svg width="14" height="14"><use href="#i-arw"/></svg></a></p>
+    </div>
+    <div class="acc" data-acc data-rv data-rv-delay="90"></div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="section final" id="get-started">
+  <div class="wrap final__in">
+    <h2 class="h2" data-rv>
+      <span class="rvt"><span>Ready to move</span></span>
+      <span class="rvt"><span style="--d:110ms">your school forward?</span></span>
+    </h2>
+    <p data-rv data-rv-delay="160">Bring your school's everyday operations into one simple, connected platform.</p>
+    <div class="final__cta" data-rv data-rv-delay="220">
+      <a class="btn btn--lg btn--invert" data-magnetic href="#get-started">Get Started <svg class="arw" width="16" height="16"><use href="#i-arw"/></svg></a>
+      <a class="btn btn--lg btn--outline-invert" data-magnetic href="#contact">Talk to Us</a>
+    </div>
+    <p class="final__note" data-rv data-rv-delay="280">Simple. Connected. Built for what's next.</p>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__top">
+      <div>
+        <a class="brand" href="#top">
+          <svg class="brand__mk" viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6.5" fill="#03045E"/><path d="M6 17.2V7.4l6 5.1 6-5.1v9.8" stroke="#fff" stroke-width="2.1" fill="none" stroke-linejoin="round" stroke-linecap="round"/></svg>
+          <span>Mevo School</span>
+        </a>
+        <p class="foot__tag">Software for What's Next.</p>
+        <div class="foot__soc">
+          <a href="#social" aria-label="X"><svg><use href="#i-x"/></svg></a>
+          <a href="#social" aria-label="LinkedIn"><svg><use href="#i-in"/></svg></a>
+          <a href="#social" aria-label="YouTube"><svg><use href="#i-yt"/></svg></a>
+        </div>
+      </div>
+      <div class="foot__col">
+        <h5>Product</h5>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#solutions">Solutions</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#resources">Resources</a></li>
+        </ul>
+      </div>
+      <div class="foot__col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#privacy">Privacy</a></li>
+          <li><a href="#terms">Terms</a></li>
+        </ul>
+      </div>
+      <div class="foot__col">
+        <h5>Get started</h5>
+        <ul>
+          <li><a href="#get-started">Create an account</a></li>
+          <li><a href="#login">Login</a></li>
+          <li><a href="#contact">Talk to us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot__bot">
+      <span>© <span data-year>2026</span> Mevo School. All rights reserved.</span>
+      <span class="st"><span class="dot-live"></span> All systems operational</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/product-ui.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
